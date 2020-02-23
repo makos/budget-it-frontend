@@ -1,2 +1,14 @@
-<h1>{{ title }}</h1>
-<app-records></app-records>
+<nav>
+  <a class="brand" href="#budget-it">Budget It</a>
+
+  <input id="bmenub" class="show" type="checkbox">
+  <label class="burger pseudo button" for="bmenub">Menu</label>
+
+  <div class="menu">
+    <a class="pseudo button" href="#">About</a>
+    <a *ngIf="user" class="pseudo" href="#">{{ user }}</a>
+  </div>
+</nav>
+
+<app-landing-page *ngIf="!user"></app-landing-page>
+<app-dashboard *ngIf="user"></app-dashboard>
