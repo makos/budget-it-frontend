@@ -5,27 +5,39 @@ import { decode as jwtDecode } from 'jsonwebtoken';
   providedIn: 'root'
 })
 export class TokenService {
-  
+  private user: string;
+
   getToken(): string {
     return localStorage.getItem('jwt');
   }
 
   setToken(token: string) {
     localStorage.setItem('jwt', token);
+    this.setUser();
+  }
+
+  private setUser() {
+    this.user = this.decodeToken();
   }
 
   removeToken() {
     localStorage.removeItem('jwt');
+    this.user = null;
   }
 
-  getUser(): string {
+  getUsername(): string {
+    return this.user;
+  }
+
+  private decodeToken(): string {
     const decoded = jwtDecode(localStorage.getItem('jwt'));
-    console.log(decoded);
     if (decoded instanceof Object) {
       return decoded.loggedInAs;
     }
     return decoded;
   }
 
-  constructor() { }
+  constructor() {
+    this.setUser();
+  }
 }
