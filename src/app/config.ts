@@ -6,9 +6,6 @@ export class Config {
   private static apiLoginUrl: string = '/api/v1/login';
   private static apiRegisterUrl: string = '/api/v1/register';
 
-  private constructor() {
-  }
-
   static getBaseUrl(): string {
     return Config.apiBaseUrl;
   }
