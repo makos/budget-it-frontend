@@ -6,7 +6,8 @@
 
   <div class="menu">
     <a class="pseudo button" href="#">About</a>
-    <a *ngIf="user" class="pseudo" href="#">{{ user }}</a>
+    <a *ngIf="user" class="pseudo button" href="#">{{ user }}</a>
+    <a *ngIf="user" class="pseudo button" (click)="logout()">Logout</a>
   </div>
 </nav>
 

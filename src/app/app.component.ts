@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenService } from './token.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,14 @@ export class AppComponent implements OnInit {
   title = 'Budget It';
   user: string;
 
+  logout() {
+    this.userService.logout();
+    location.reload();
+  }
+
   constructor(
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private userService: UserService
   ) {}
 
   ngOnInit() {

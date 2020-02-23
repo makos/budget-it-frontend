@@ -41,7 +41,7 @@
         <input #username class="full half-1200" type="text" placeholder="Username">
         <input #password class="full half-1200" type="password" placeholder="Password">
       </fieldset>
-      <button class="full">Sign in</button>
+      <button class="full" (click)="login(username.value, password.value)">Sign in</button>
     </div>
 
     <div class="center-text">
