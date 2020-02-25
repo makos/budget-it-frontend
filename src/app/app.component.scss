@@ -1,0 +1,89 @@
+@import '../ayu.scss';
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:visited {
+  color: $color-font;
+}
+
+a:hover {
+  color: $color-font;
+  background-color: $color-bg-hover;
+}
+
+a.appname {
+  color: $color-title;
+  font-weight: 900;
+  font-size: 1.50em;
+  padding: 10px 0px;
+  display: block;
+  float: none;
+  text-align: center;
+}
+
+a.appname:hover {
+  background-color: $color-navbar;
+}
+
+a.topnav-link {
+  display: block;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+a.topnav-link:hover {
+  transition: background-color 0.5s;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: auto;
+  background-color: $color-navbar;
+  border-bottom: 1px solid $color-border;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: none;
+}
+
+@media screen and (min-width: 600px) {
+  a.appname {
+    padding: 10px 20px;
+    float: left;
+  }
+
+  a.topnav-link {
+    padding: 14.5px 20px;
+  }
+
+  li {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  nav {
+    padding: 0 15%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    padding: 0 30%;
+  }
+}
