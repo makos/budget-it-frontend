@@ -5,7 +5,7 @@ import { RecordService } from '../record.service';
 @Component({
   selector: 'app-records',
   templateUrl: './records.component.html',
-  styleUrls: ['./records.component.css']
+  styleUrls: ['./records.component.scss']
 })
 export class RecordsComponent implements OnInit {
   records: Record[];
