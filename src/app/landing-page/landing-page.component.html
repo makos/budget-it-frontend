@@ -1,8 +1,8 @@
-<div class="flex one two-600 twelve-1200 grow">
-  <div class="center-text half" id="landing-header">
-    <h1 id="budget-it">Landing page</h1>
-    <div id="landing-about">
-      <p class="paragraph">
+<div class="landing-page-root">
+  <div>
+    <h1>Landing page</h1>
+    <div>
+      <p>
         Vestibulum auctor at neque vitae interdum. Nullam gravida fermentum lorem,
         ut tempor justo egestas hendrerit. Pellentesque habitant morbi tristique
         senectus et netus et malesuada fames ac turpis egestas. Aliquam faucibus
@@ -20,8 +20,8 @@
       </p>
     </div>
   </div>
-  <div class="text-margin" id="landing-side">
-    <p class="paragraph">
+  <div>
+    <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam
     tempor dapibus. Nam efficitur risus quis mattis interdum. Praesent laoreet
     leo tortor, quis rhoncus ligula suscipit vitae. Nam ultrices pretium elit eu
@@ -37,14 +37,14 @@
 
     <div class="center-text">
       <h2>Sign in</h2>
-      <fieldset class="flex two">
-        <input #username class="full half-1200" type="text" placeholder="Username">
-        <input #password class="full half-1200" type="password" placeholder="Password">
+      <fieldset>
+        <input #username type="text" placeholder="Username">
+        <input #password type="password" placeholder="Password">
       </fieldset>
-      <button class="full" (click)="login(username.value, password.value)">Sign in</button>
+      <button (click)="login(username.value, password.value)">Sign in</button>
     </div>
 
-    <div class="center-text">
+    <div>
       <h2>Register</h2>
       <fieldset>
         <input #username type="text" placeholder="Username">
@@ -54,7 +54,7 @@
       <button class="full">Sign up</button>
     </div>
 
-    <p class="paragraph">
+    <p>
     Aenean lacus lorem, mattis sit amet ligula in, rhoncus luctus elit. Duis
     risus mauris, laoreet a neque a, varius tincidunt felis. Phasellus efficitur
     vitae arcu eget euismod. Cras vitae lorem vitae enim fringilla lobortis eu

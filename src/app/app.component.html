@@ -1,15 +1,9 @@
 <nav>
-  <a class="brand" href="#budget-it">Budget It</a>
-
-  <input id="bmenub" class="show" type="checkbox">
-  <label class="burger pseudo button" for="bmenub">Menu</label>
-
-  <div class="menu">
-    <a class="pseudo button" href="#">About</a>
-    <a *ngIf="user" class="pseudo button" href="#">{{ user }}</a>
-    <a *ngIf="user" class="pseudo button" (click)="logout()">Logout</a>
-  </div>
+  <ul>
+    <li><a class="appname" href="#">Budget It</a></li>
+    <li class="float-right"><a class="topnav-link" href="#">About</a></li>
+    <li class="float-right"><a class="topnav-link" href="#">Config</a></li>
+  </ul>
 </nav>
-
 <app-landing-page *ngIf="!user"></app-landing-page>
 <app-dashboard *ngIf="user"></app-dashboard>
