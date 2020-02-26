@@ -4,6 +4,10 @@
   display: block;
   text-align: center;
   text-decoration: none;
+  transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out; 
+  -moz-transition:all .5s ease-in-out; 
+  -webkit-transition:all .5s ease-in-out;
 }
 
 %transition-all {
@@ -14,12 +18,11 @@
 }
 
 .appname {
-  @extend %transition-all;
   @extend %nav-link;
   color: $color-title;
   font-weight: 900;
-  font-size: 1.50em;
-  padding: 10px 0px;
+  font-size: 3rem;
+  padding: 0.6rem 0;
   float: none;
 }
 
@@ -29,8 +32,7 @@
 
 .topnav-link {
   @extend %nav-link;
-  @extend %transition-all;
-  padding: 10px 0px;
+  padding: 1rem 0;
   color: $color-font;
 }
 
@@ -45,10 +47,9 @@
 
 .button {
   @extend %nav-link;
-  @extend %transition-all;
   background-color: $color-button;
   color: $color-button-text;
-  padding: 10px 0px;
+  padding: 1rem 0;
 }
 
 .button:hover {
@@ -88,21 +89,23 @@ nav {
     background-color: $color-button;
     color: $color-button-text;
     border-radius: 10px;
-    padding: 10px;
-    margin: 5px 0 0 0;
+    padding: 1rem;
+    margin-top: 0.6rem;
   }
 
   .appname {
-    padding: 10px 20px;
+    padding: 0.8rem 1.2rem;
     float: left;
   }
 
   .topnav-link {
-    padding: 14.5px 20px;
+    padding: 1.6rem 1.2rem;
   }
 
   li {
     float: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .float-right {
@@ -110,16 +113,16 @@ nav {
   }
 
   nav {
-    padding: 0 15%;
+    padding: 0 13rem;
   }
 
-  div.inline {
+  .inline {
     display: inline;
   }
 }
 
 @media screen and (min-width: 1200px) {
   nav {
-    padding: 0 20%;
+    padding: 0 30rem;
   }
 }
