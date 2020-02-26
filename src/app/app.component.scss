@@ -1,51 +1,75 @@
 @import '../ayu.scss';
 
-a {
+%nav-link {
+  display: block;
+  text-align: center;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
 
-a:visited {
-  color: $color-font;
+%transition-all {
+  transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out; 
+  -moz-transition:all .5s ease-in-out; 
+  -webkit-transition:all .5s ease-in-out;
 }
 
-a:hover {
-  color: $color-font;
-  background-color: $color-bg-hover;
-}
-
-a.appname {
+.appname {
+  @extend %transition-all;
+  @extend %nav-link;
   color: $color-title;
   font-weight: 900;
   font-size: 1.50em;
   padding: 10px 0px;
-  display: block;
   float: none;
-  text-align: center;
 }
 
-a.appname:hover {
+.appname:hover {
   background-color: $color-navbar;
 }
 
-a.topnav-link {
-  display: block;
-  text-align: center;
+.topnav-link {
+  @extend %nav-link;
+  @extend %transition-all;
+  padding: 10px 0px;
+  color: $color-font;
+}
+
+.topnav-link:visited {
+  color: $color-font;
+}
+
+.topnav-link:hover {
+  color: $color-link-hover;
+  transition: color 0.5s;
+}
+
+.button {
+  @extend %nav-link;
+  @extend %transition-all;
+  background-color: $color-button;
+  color: $color-button-text;
   padding: 10px 0px;
 }
 
-a.topnav-link:hover {
-  transition: background-color 0.5s;
+.button:hover {
+  background-color: $color-button-hover;
+  color: $color-button-text-hover;
+  transition: all .3s;
 }
 
 ul {
+  @extend %transition-all;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+li {
+  float: none;
+}
+
 nav {
+  @extend %transition-all;
   width: auto;
   background-color: $color-navbar;
   border-bottom: 1px solid $color-border;
@@ -55,17 +79,25 @@ nav {
   padding: 0;
 }
 
-li {
-  float: none;
+.inline {
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
-  a.appname {
+  .button {
+    background-color: $color-button;
+    color: $color-button-text;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0 0 0;
+  }
+
+  .appname {
     padding: 10px 20px;
     float: left;
   }
 
-  a.topnav-link {
+  .topnav-link {
     padding: 14.5px 20px;
   }
 
@@ -80,10 +112,14 @@ li {
   nav {
     padding: 0 15%;
   }
+
+  div.inline {
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   nav {
-    padding: 0 30%;
+    padding: 0 20%;
   }
 }

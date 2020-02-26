@@ -1,8 +1,10 @@
 <nav>
   <ul>
     <li><a class="appname" href="#">Budget It</a></li>
-    <li class="float-right"><a class="topnav-link" href="#">About</a></li>
-    <li class="float-right"><a class="topnav-link" href="#">Config</a></li>
+    <div class="float-right inline">
+      <li><a class="topnav-link" href="#">Support</a></li>
+      <li><a class="button" href="#">Login / Register</a></li>
+    </div>
   </ul>
 </nav>
 <app-landing-page *ngIf="!user"></app-landing-page>
