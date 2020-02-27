@@ -34,6 +34,7 @@
   @extend %nav-link;
   padding: 1rem 0;
   color: $color-font;
+  display: none; // Don't show it on mobile.
 }
 
 .topnav-link:visited {
@@ -50,6 +51,7 @@
   background-color: $color-button;
   color: $color-button-text;
   padding: 1rem 0;
+  display: none; // Don't show it on mobile.
 }
 
 .button:hover {

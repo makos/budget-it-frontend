@@ -1,7 +1,81 @@
 @import '../../ayu.scss';
 
+%table-borders {
+  border: 0.1rem solid lightgray;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.5rem;
+  position: absolute;
+  width: 20rem;
+  left: 1.5rem;
+  top: 5rem;
+  border-radius: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #F2F4F7;
+}
+
+th {
+  background-color: #73D0FF;
+  color: #1D3440;
+}
+
 .landing-page-root {
-  margin: 0 10px;
+  margin: 0 1rem;
+}
+
+.laptop {
+  margin: 5rem 0;
+}
+
+.laptop-screen {
+  margin: auto;
+  background-color: #FAFAFA;
+  border-radius: 1rem;
+  width: 23rem;
+  height: 16rem;
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  top: 1rem;
+}
+
+.laptop-base {
+  margin: auto;
+  background-color: #959DA64D;
+  height: 18rem;
+  width: 25rem;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+.laptop-base::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 1rem;
+  left: -2.5rem;
+  bottom: -1rem;
+  border-radius: 1rem 1rem 2rem 2rem;
+  background-image: linear-gradient(to right, #959DA6B3 0%, #959DA6B3 40%, #ABB0B6 40%, #ABB0B6 60%, #959DA6B3 60%, #959DA6B3 100%);
+}
+
+.laptop-base::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 0.5rem;
+  left: -2.5rem;
+  border-radius: 0 0 5rem 5rem;
+  bottom: -1rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -10,6 +84,16 @@ p {
 
 @media screen and (min-width: 600px) {
   .root-container {
-    margin: 0 40px;
+    margin: 0 4rem;
+  }
+
+  .laptop {
+    margin: 3rem 20rem;
+  }
+
+  .laptop-base {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 20px;
   }
 }
