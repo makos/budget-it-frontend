@@ -1,38 +1,37 @@
 @import '../../ayu.scss';
+@import '../../classes.scss';
 
-%table-borders {
-  border: 0.1rem solid lightgray;
-}
-
-table {
-  border-collapse: collapse;
-  text-align: center;
-  font-size: 0.5rem;
+.pie {
+  @extend %transition-all;
   position: absolute;
-  width: 20rem;
+  width: 10rem;
+  height: 10rem;
   left: 1.5rem;
-  top: 5rem;
-  border-radius: 1rem;
+  top: 1rem;
 }
 
-tr:nth-child(even) {
-  background-color: #F2F4F7;
-}
-
-th {
-  background-color: #73D0FF;
-  color: #1D3440;
+.histogram {
+  @extend %transition-all;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  left: 12.25rem;
+  top: 4.5rem;
 }
 
 .landing-page-root {
+  @extend %transition-all;
   margin: 0 1rem;
 }
 
 .laptop {
+  @extend %transition-all;
   margin: 5rem 0;
+  opacity: 0.7;
 }
 
 .laptop-screen {
+  @extend %transition-all;
   margin: auto;
   background-color: #FAFAFA;
   border-radius: 1rem;
@@ -45,6 +44,7 @@ th {
 }
 
 .laptop-base {
+  @extend %transition-all;
   margin: auto;
   background-color: #959DA64D;
   height: 18rem;
@@ -55,6 +55,7 @@ th {
 }
 
 .laptop-base::after {
+  @extend %transition-all;
   z-index: 1;
   content: "";
   position: absolute;
@@ -67,6 +68,7 @@ th {
 }
 
 .laptop-base::before {
+  @extend %transition-all;
   z-index: 2;
   content: "";
   position: absolute;
@@ -78,22 +80,48 @@ th {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-p {
-  text-align: justify;
-}
-
 @media screen and (min-width: 600px) {
-  .root-container {
+  .landing-page-root {
     margin: 0 4rem;
   }
 
-  .laptop {
-    margin: 3rem 20rem;
+  .laptop-base {
+    width: 40rem;
+    height: 28rem;
   }
 
-  .laptop-base {
+  .laptop-screen {
+    width: 36rem;
+    height: 24rem;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .laptop-base::after {
     width: 50rem;
-    height: 50rem;
-    border-radius: 20px;
+    height: 1.5rem;
+    bottom: -1.5rem;
+    left: -5rem;
+  }
+
+  .laptop-base::before {
+    width: 50rem;
+    height: 0.75rem;
+    bottom: -1.5rem;
+    left: -5rem;
+  }
+
+  .pie {
+    width: 15rem;
+    height: 15rem;
+    left: 2rem;
+    top: 1.5rem;
+  }
+
+  .histogram {
+    width: 15rem;
+    height: 15rem;
+    left: 19rem;
+    top: 7rem;
   }
 }

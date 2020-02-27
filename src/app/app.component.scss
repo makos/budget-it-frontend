@@ -1,16 +1,10 @@
 @import '../ayu.scss';
+@import '../classes.scss';
 
 %nav-link {
   display: block;
   text-align: center;
   text-decoration: none;
-  transition:all .5s ease-in-out;
-  -o-transition:all .5s ease-in-out; 
-  -moz-transition:all .5s ease-in-out; 
-  -webkit-transition:all .5s ease-in-out;
-}
-
-%transition-all {
   transition:all .5s ease-in-out;
   -o-transition:all .5s ease-in-out; 
   -moz-transition:all .5s ease-in-out; 
@@ -93,6 +87,7 @@ nav {
     border-radius: 10px;
     padding: 1rem;
     margin-top: 0.6rem;
+    display: block;
   }
 
   .appname {
@@ -102,6 +97,7 @@ nav {
 
   .topnav-link {
     padding: 1.6rem 1.2rem;
+    display: block;
   }
 
   li {
@@ -120,6 +116,17 @@ nav {
 
   .inline {
     display: inline;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .topnav-link {
+    padding: 1.6rem 0.5rem;
+  }
+
+  li {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
