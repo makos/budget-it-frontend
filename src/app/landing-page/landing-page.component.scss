@@ -33,7 +33,7 @@
 .laptop-screen {
   @extend %transition-all;
   margin: auto;
-  background-color: #FAFAFA;
+  background-color: $color-navbar;
   border-radius: 1rem;
   width: 23rem;
   height: 16rem;
@@ -46,7 +46,7 @@
 .laptop-base {
   @extend %transition-all;
   margin: auto;
-  background-color: #959DA64D;
+  background-color: $color-laptop-base;
   height: 18rem;
   width: 25rem;
   border-radius: 1rem;
@@ -64,7 +64,15 @@
   left: -2.5rem;
   bottom: -1rem;
   border-radius: 1rem 1rem 2rem 2rem;
-  background-image: linear-gradient(to right, #959DA6B3 0%, #959DA6B3 40%, #ABB0B6 40%, #ABB0B6 60%, #959DA6B3 60%, #959DA6B3 100%);
+  background-image: linear-gradient(
+    to right, 
+    $color-laptop-gradient 0%, 
+    $color-laptop-gradient 40%, 
+    $color-laptop-mousepad 40%, 
+    $color-laptop-mousepad 60%, 
+    $color-laptop-gradient 60%, 
+    $color-laptop-gradient 100%
+  );
 }
 
 .laptop-base::before {
