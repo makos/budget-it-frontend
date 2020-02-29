@@ -26,6 +26,7 @@
 
 .topnav-link {
   @extend %nav-link;
+  @extend %transition-all;
   padding: 1rem 0;
   color: $color-font;
   display: none; // Don't show it on mobile.
@@ -120,13 +121,8 @@ nav {
 }
 
 @media screen and (max-width: 750px) {
-  .topnav-link {
-    padding: 1.6rem 0.5rem;
-  }
-
-  li {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  nav {
+    padding: 0 6rem;
   }
 }
 
