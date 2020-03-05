@@ -15,6 +15,13 @@
   z-index: 1;
   left: 1rem;
   top: 1rem;
+
+  @include respond-to('small') {
+    width: 36rem;
+    height: 24rem;
+    left: 2rem;
+    top: 2rem;
+  }
 }
 
 .laptop-base {
@@ -26,6 +33,11 @@
   border-radius: 1rem;
   position: relative;
   z-index: 0;
+
+  @include respond-to('small') {
+    width: 40rem;
+    height: 28rem;
+  }
 }
 
 .laptop-base::after {
@@ -47,6 +59,13 @@
     $color-laptop-gradient 60%, 
     $color-laptop-gradient 100%
   );
+
+  @include respond-to('small') {
+    width: 50rem;
+    height: 1.5rem;
+    bottom: -1.5rem;
+    left: -5rem;
+  }
 }
 
 .laptop-base::before {
@@ -60,29 +79,8 @@
   border-radius: 0 0 5rem 5rem;
   bottom: -1rem;
   background-color: rgba(0, 0, 0, 0.2);
-}
 
-@media screen and (min-width: 600px) {
-  .laptop-base {
-    width: 40rem;
-    height: 28rem;
-  }
-
-  .laptop-screen {
-    width: 36rem;
-    height: 24rem;
-    left: 2rem;
-    top: 2rem;
-  }
-
-  .laptop-base::after {
-    width: 50rem;
-    height: 1.5rem;
-    bottom: -1.5rem;
-    left: -5rem;
-  }
-
-  .laptop-base::before {
+  @include respond-to('small') {
     width: 50rem;
     height: 0.75rem;
     bottom: -1.5rem;

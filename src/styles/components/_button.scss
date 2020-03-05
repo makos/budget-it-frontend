@@ -1,10 +1,9 @@
 .button {
   @extend %nav-link;
-  display: none; // Don't show it on mobile.
-}
+  // Don't show it on mobile.
+  display: none;
 
-@media screen and (min-width: 600px) {
-  .button {
+  @include respond-to('small') {
     background-color: $color-button;
     color: $color-button-text;
     border-radius: 10px;
@@ -12,10 +11,10 @@
     margin-top: 0.6rem;
     display: block;
   }
+}
 
-  .button:hover {
-    background-color: $color-button-hover;
-    color: $color-button-text-hover;
-    transition: all .3s;
-  }
+.button:hover {
+  background-color: $color-button-hover;
+  color: $color-button-text-hover;
+  transition: all .3s;
 }

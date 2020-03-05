@@ -7,22 +7,18 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+
+  @include respond-to('small') {
+    padding: 0 13rem;
+  }
+
+  @include respond-to('large') {
+    padding: 0 30rem;
+  }
 }
 
 @media screen and (max-width: 750px) {
   .navbar {
     padding: 0 6rem;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .navbar {
-    padding: 0 13rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .navbar {
-    padding: 0 30rem;
   }
 }

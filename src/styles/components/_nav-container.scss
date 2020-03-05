@@ -1,9 +1,7 @@
 .nav-container {
   display: block;
-}
 
-@media screen and (min-width: 600px) {
-  .nav-container {
+  @include respond-to('small') {
     display: inline;
     float: right;
   }

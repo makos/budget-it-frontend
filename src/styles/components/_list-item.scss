@@ -1,9 +1,7 @@
 .list-item {
   float: none;
-}
 
-@media screen and (min-width: 600px) {
-  .list-item {
+  @include respond-to('small') {
     float: left;
     margin-left: 2rem;
     margin-right: 2rem;
