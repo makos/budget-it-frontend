@@ -1,0 +1,17 @@
+%transition-all {
+  transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out; 
+  -moz-transition:all .5s ease-in-out; 
+  -webkit-transition:all .5s ease-in-out;
+}
+
+%nav-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  @extend %transition-all;
+  /*transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out; 
+  -moz-transition:all .5s ease-in-out; 
+  -webkit-transition:all .5s ease-in-out;*/
+}

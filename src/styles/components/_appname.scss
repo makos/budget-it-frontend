@@ -1,0 +1,19 @@
+.appname {
+  @extend %nav-link;
+  color: $color-title;
+  font-weight: 900;
+  font-size: 3rem;
+  padding: 0.6rem 0;
+  float: none;
+}
+
+.appname:hover {
+  background-color: $color-navbar;
+}
+
+@media screen and (min-width: 600px) {
+  .appname {
+    padding: 0.8rem 1.2rem;
+    float: left;
+  }
+}

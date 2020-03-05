@@ -1,5 +1,32 @@
-@import '../../ayu.scss';
-@import '../../classes.scss';
+/*h1 {
+  @extend %transition-all;
+  font-size: 2.25rem;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.button {
+  @extend %button-template;
+  margin: 4rem 2rem;
+  background-color: $color-button;
+  color: $color-button-text;
+}
+
+.button:hover {
+  background-color: $color-button-hover;
+  color: $color-button-text-hover;
+  transition: all .3s;
+}
+
+.button-reversed {
+  @extend %button-template;
+  margin: 4rem 2rem;
+  background-color: $color-button-text;
+  color: $color-button;
+  border: 1px solid $color-title;
+}
 
 .pie {
   @extend %transition-all;
@@ -89,6 +116,10 @@
 }
 
 @media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
   .landing-page-root {
     margin: 0 4rem;
   }
@@ -132,4 +163,4 @@
     left: 19rem;
     top: 7rem;
   }
-}
+}*/

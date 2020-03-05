@@ -1,0 +1,23 @@
+.navlink {
+  @extend %nav-link;
+  @extend %transition-all;
+  padding: 1rem 0;
+  color: $color-font;
+  display: none; // Don't show it on mobile.
+}
+
+.navlink:visited {
+  color: $color-font;
+}
+
+.navlink:hover {
+  color: $color-link-hover;
+  transition: color 0.5s;
+}
+
+@media screen and (min-width: 600px) {
+  .navlink {
+    padding: 1.6rem 1.2rem;
+    display: block;
+  }
+}

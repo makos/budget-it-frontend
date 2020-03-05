@@ -1,133 +1,26 @@
-@import '../ayu.scss';
-@import '../classes.scss';
-
-%nav-link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  transition:all .5s ease-in-out;
-  -o-transition:all .5s ease-in-out; 
-  -moz-transition:all .5s ease-in-out; 
-  -webkit-transition:all .5s ease-in-out;
-}
-
-.appname {
-  @extend %nav-link;
-  color: $color-title;
-  font-weight: 900;
-  font-size: 3rem;
-  padding: 0.6rem 0;
-  float: none;
-}
-
-.appname:hover {
-  background-color: $color-navbar;
-}
-
-.topnav-link {
-  @extend %nav-link;
-  @extend %transition-all;
-  padding: 1rem 0;
-  color: $color-font;
-  display: none; // Don't show it on mobile.
-}
-
-.topnav-link:visited {
-  color: $color-font;
-}
-
-.topnav-link:hover {
-  color: $color-link-hover;
-  transition: color 0.5s;
-}
+/*@use '../color';
+@use '../extend';
 
 .button {
   @extend %nav-link;
-  background-color: $color-button;
-  color: $color-button-text;
-  padding: 1rem 0;
-  display: none; // Don't show it on mobile.
-}
-
-.button:hover {
-  background-color: $color-button-hover;
-  color: $color-button-text-hover;
-  transition: all .3s;
-}
-
-ul {
-  @extend %transition-all;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  float: none;
-}
-
-nav {
-  @extend %transition-all;
-  width: auto;
-  background-color: $color-navbar;
-  border-bottom: 1px solid $color-border;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.inline {
-  display: block;
 }
 
 @media screen and (min-width: 600px) {
   .button {
-    background-color: $color-button;
-    color: $color-button-text;
+    background-color: color.$color-button;
+    color: color.$color-button-text;
     border-radius: 10px;
     padding: 1rem;
     margin-top: 0.6rem;
     display: block;
   }
 
-  .appname {
-    padding: 0.8rem 1.2rem;
-    float: left;
-  }
-
-  .topnav-link {
-    padding: 1.6rem 1.2rem;
-    display: block;
-  }
-
-  li {
-    float: left;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
 
   .float-right {
     float: right;
   }
 
-  nav {
-    padding: 0 13rem;
-  }
-
   .inline {
     display: inline;
   }
-}
-
-@media screen and (max-width: 750px) {
-  nav {
-    padding: 0 6rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  nav {
-    padding: 0 30rem;
-  }
-}
+}*/
