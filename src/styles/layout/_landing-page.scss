@@ -1,0 +1,10 @@
+.landing-page {
+  @extend %transition-all;
+  margin: 0 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .landing-page {
+    margin: 0 4rem;
+  }
+}

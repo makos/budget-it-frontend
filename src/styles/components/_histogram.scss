@@ -1,0 +1,17 @@
+.histogram {
+  @extend %transition-all;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  left: 12.25rem;
+  top: 4.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .histogram {
+    width: 15rem;
+    height: 15rem;
+    left: 19rem;
+    top: 7rem;
+  }
+}

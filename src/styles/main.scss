@@ -6,12 +6,18 @@
 @import 'base/reset';
 @import 'base/typography';
 
-@import 'layout/navbar';
+@import 'layout/landing-page';
 
 @import 'components/appname';
 @import 'components/button';
+@import 'components/button-reverse';
+@import 'components/heading';
+@import 'components/hero-text';
+@import 'components/laptop';
 @import 'components/list';
 @import 'components/list-item';
 @import 'components/nav-container';
 @import 'components/navbar';
 @import 'components/navlink';
+@import 'components/pie';
+@import 'components/histogram';

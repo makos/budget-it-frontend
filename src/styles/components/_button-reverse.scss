@@ -1,0 +1,7 @@
+.button-reverse {
+  @extend .button;
+  margin: 4rem 2rem;
+  background-color: $color-button-text;
+  color: $color-button;
+  border: 1px solid $color-title;
+}

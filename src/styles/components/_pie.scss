@@ -1,0 +1,17 @@
+.pie {
+  @extend %transition-all;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  left: 1.5rem;
+  top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .pie {
+    width: 15rem;
+    height: 15rem;
+    left: 2rem;
+    top: 1.5rem;
+  }
+}
