@@ -1,7 +1,7 @@
 .button {
   @extend %nav-link;
   // Don't show it on mobile.
-  display: none;
+  //display: none;
 
   @include respond-to('small') {
     background-color: $color-button;
@@ -21,8 +21,6 @@
 
 .button-reverse {
   @extend .button;
-  margin: 4rem 2rem;
-  background-color: $color-button-text;
+  background-color: $color-laptop-base;
   color: $color-button;
-  border: 1px solid $color-title;
 }
