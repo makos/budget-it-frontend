@@ -1,5 +1,5 @@
 .navlink {
-  @extend %nav-link;
+  @extend %link-template;
   @extend %transition-all;
   padding: 1rem 0;
   color: $color-font;

@@ -1,5 +1,5 @@
 .appname {
-  @extend %nav-link;
+  @extend %link-template;
   color: $color-title;
   font-weight: 900;
   font-size: 3rem;

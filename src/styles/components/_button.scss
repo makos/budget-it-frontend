@@ -1,5 +1,5 @@
 .button {
-  @extend %nav-link;
+  @extend %link-template;
   // Don't show it on mobile.
   //display: none;
 
