@@ -1,0 +1,7 @@
+.button-container {
+  margin: 0 3rem;
+
+  @include respond-to('small') {
+    margin: 0 40rem;
+  }
+}
