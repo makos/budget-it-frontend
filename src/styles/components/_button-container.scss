@@ -1,7 +1,11 @@
 .button-container {
   margin: 0 3rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 4rem;
+  grid-column-gap: 5rem;
 
   @include respond-to('small') {
-    margin: 0 40rem;
+    margin: 0 60rem;
   }
 }
