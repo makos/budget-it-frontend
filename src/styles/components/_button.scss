@@ -1,16 +1,10 @@
 .button {
   @extend %link-template;
-  // Don't show it on mobile.
-  //display: none;
-
-  @include respond-to('small') {
-    background-color: $color-button;
-    color: $color-button-text;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 0.6rem;
-    display: block;
-  }
+  background-color: $color-button;
+  color: $color-button-text;
+  border-radius: 10px;
+  padding: 1rem;
+  display: block;
 }
 
 .button:hover {
