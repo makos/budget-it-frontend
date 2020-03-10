@@ -18,3 +18,8 @@
   background-color: $color-laptop-base;
   color: $color-button;
 }
+
+.button-large {
+  @extend .button;
+  padding: 1rem 5rem;
+}
