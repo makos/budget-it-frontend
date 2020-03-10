@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { RecordsComponent } from './records/records.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RecordsComponent,
     LandingPageComponent,
     DashboardComponent,
+    LoginComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

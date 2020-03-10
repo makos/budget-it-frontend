@@ -1,8 +1,2 @@
-<div class="flex one two-600 twelve-1200 grow">
-  <div class="testdiv half">
-    <h1>Dashboard</h1>
-  </div>
-  <div class="testdiv">
-    <span class="testspan">2</span>
-  </div>
-</div>
+<app-landing-page *ngIf="!user"></app-landing-page>
+<app-dashboard *ngIf="user"></app-dashboard>
