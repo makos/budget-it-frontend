@@ -30,7 +30,7 @@
     "@angular/compiler-cli": "^9.0.5",
     "@angular/language-service": "^9.0.5",
     "@ngtools/webpack": "^9.0.5",
-    "@types/jasmine": "^3.5.8",
+    "@types/jasmine": "^3.5.9",
     "@types/jasminewd2": "^2.0.3",
     "@types/jsonwebtoken": "^8.3.8",
     "@types/node": "^12.12.29",
