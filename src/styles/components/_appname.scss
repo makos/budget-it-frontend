@@ -2,12 +2,10 @@
   @extend %link-template;
   color: $color-title;
   font-weight: 900;
-  font-size: 3rem;
-  padding: 0.6rem 0;
+  font-size: 3.6rem;
   float: none;
 
   @include respond-to('small') {
-    padding: 0.8rem 1.2rem;
     float: left;
   }
 }

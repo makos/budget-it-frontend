@@ -3,7 +3,6 @@
 
   @include respond-to('small') {
     float: left;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: 0.9rem 2rem;
   }
 }
