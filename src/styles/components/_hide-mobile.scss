@@ -1,0 +1,7 @@
+.hide-mobile {
+  display: none;
+
+  @include respond-to('small') {
+    display: inherit;
+  }
+}
