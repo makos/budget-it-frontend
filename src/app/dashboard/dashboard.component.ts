@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from '../token.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  user: string;
 
-  constructor() { }
+  logout() {
+    this.userService.logout();
+    location.reload();
+  }
+
+  constructor(
+    private tokenService: TokenService,
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
+    this.user = this.tokenService.getUsername();
   }
 
 }
