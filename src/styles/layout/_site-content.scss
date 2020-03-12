@@ -1,0 +1,8 @@
+.site-content {
+  @extend %transition-all;
+  margin: 0 1rem;
+
+  @include respond-to('small') {
+    margin: 2rem 4rem;
+  }
+}
