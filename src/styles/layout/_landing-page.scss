@@ -1,8 +1,0 @@
-.landing-page {
-  @extend %transition-all;
-  margin: 0 1rem;
-
-  @include respond-to('small') {
-    margin: 0 4rem;
-  }
-}
