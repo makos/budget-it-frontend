@@ -1,4 +1,4 @@
-.appname {
+.appname, .appname:visited {
   @extend %link-template;
   color: $color-title;
   font-weight: 900;
