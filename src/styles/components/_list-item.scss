@@ -1,6 +1,7 @@
 .list-item {
   float: none;
   margin: 0.9rem 2rem;
+  text-align: center;
 
   @include respond-to('small') {
     float: left;
