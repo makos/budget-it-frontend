@@ -1,29 +1,26 @@
-.button {
-  @extend %link-template;
+.button, .button:visited {
+  @extend %button-template;
   background-color: $color-button;
   color: $color-button-text;
-  border-radius: 10px;
-  padding: 1rem;
-  display: inline-block;
-}
-
-.button:hover {
-  background-color: $color-button-hover;
-  color: $color-button-text-hover;
-  transition: all .3s;
 }
 
 .button-reverse {
-  @extend .button;
+  @extend %button-template;
   background-color: $color-laptop-base;
   color: $color-button;
 }
 
 .button-large {
-  @extend .button;
+  @extend %button-template;
   padding: 1rem 2rem;
 
   @include respond-to('large') {
     padding: 1rem 5rem;
   }
+}
+
+.button:hover, .button-reverse:hover, .button-large:hover {
+  background-color: $color-button-hover;
+  color: $color-button-text-hover;
+  transition: all .3s;
 }

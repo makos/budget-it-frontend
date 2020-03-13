@@ -6,8 +6,12 @@
 }
 
 %link-template {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  @extend %transition-all;
+  //display: block;
+  //text-align: center;
+}
+
+%button-template {
+  border-radius: 10px;
+  padding: 1rem;
+  display: inline-block;
 }
