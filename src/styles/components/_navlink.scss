@@ -1,20 +1,9 @@
 .navlink {
-  @extend %link-template;
   @extend %transition-all;
   padding: 1rem 0;
-  color: $color-font;
 
   @include respond-to('small') {
     padding: 1rem;
     display: block;
   }
-}
-
-.navlink:visited {
-  color: $color-font;
-}
-
-.navlink:hover {
-  color: $color-link-hover;
-  transition: color 0.5s;
 }
