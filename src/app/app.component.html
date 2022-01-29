@@ -1,14 +1,22 @@
-<nav class="navbar">
-  <ul class="list">
-    <li class="list-item"><a class="appname" routerLink="">Budget It</a></li>
-    <div class="nav-container">
-      <li class="list-item hide-mobile"><a class="navlink" routerLink="">Support</a></li>
-      <li class="list-item hide-mobile" *ngIf="user; else noUser"><a class="button" (click)="logout()"  routerLink="">Logout</a></li>
-      <ng-template #noUser>
-        <li class="list-item hide-mobile"><a class="button" routerLink="login">Login / Register</a></li>
-      </ng-template>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" routerLink="" style="color:#FF9940">Budget It</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" routerLink="">Support</a>
+        <a class="nav-link" (click)="logout()" routerLink="" *ngIf="user; else noUser">Logout</a>
+        <ng-template #noUser>
+          <a class="nav-link" routerLink="login">Login / Register</a>
+        </ng-template>
+      </div>
     </div>
-  </ul>
+
+  </div>
 </nav>
 
 <div class="site-content">
