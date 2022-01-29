@@ -1,2 +1,15 @@
-<h1 class="centered">Dashboard Component</h1>
-<h2 *ngIf="user" class="centered">Logged in!</h2>
+<h1 class="center">Dashboard Component</h1>
+<!-- <h2 *ngIf="user" class="centered">Logged in!</h2> -->
+
+<div *ngIf="user">
+    <h2>Welcome {{ this.user }}!</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Comment</th>
+        </tr>
+    </table>
+</div>
