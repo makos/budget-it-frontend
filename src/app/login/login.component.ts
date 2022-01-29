@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.userService.loginEvent.subscribe((event) => {
       if (event) {
-        location.reload();
+        window.location.assign('');
       }
     });
   }
