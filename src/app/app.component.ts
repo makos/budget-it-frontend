@@ -1,4 +1,8 @@
+import { tokenize } from '@angular/compiler/src/ml_parser/lexer';
+import { Token } from '@angular/compiler/src/ml_parser/tokens';
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from './token.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Budget It';
+  user: string;
 
-  constructor() {}
+  constructor(
+    private tokenService: TokenService,
+    private userService: UserService
+    ) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.user = this.tokenService.getUsername();
+  }
+
+  logout(): void {
+    this.userService.logout();
+    window.location.reload();
+  }
 }
