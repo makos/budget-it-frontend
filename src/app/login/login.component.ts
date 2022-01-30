@@ -12,6 +12,10 @@ export class LoginComponent implements OnInit {
     this.userService.login(username, password);
   }
 
+  register(username: string, password: string) {
+    window.alert('register');
+  }
+
   constructor(
     private userService: UserService
   ) {}
