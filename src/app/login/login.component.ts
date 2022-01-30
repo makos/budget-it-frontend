@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   }
 
   register(username: string, password: string) {
-    window.alert('register');
+    this.userService.register(username, password);
   }
 
   constructor(
