@@ -1,8 +1,42 @@
-<div class="center login-container">
-  <a onclick="window.history.back()" href="#">Go Back</a>
-  <form>
-    <input type="text" placeholder="Username" #username />
-    <input type="password" placeholder="Password" #password />
-    <button type="button" (click)="login(username.value, password.value)">Login</button>
-  </form>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-auto">
+      <h2 class="text-center mb-3">Log In</h2>
+      <form (keyup.enter)="login(loginUsername.value, loginPassword.value)">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Username" #loginUsername />
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" #loginPassword />
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary mx-3" type="button" (click)="login(loginUsername.value, loginPassword.value)">Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-auto">
+      <h2 class="text-center mb-3">Register</h2>
+      <form (keyup.enter)="register(registerUsername.value, registerPassword.value)">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Username" #registerUsername />
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" #registerPassword />
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" type="button" (click)="register(registerUsername.value, registerPassword.value)">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-auto">
+      <a class="btn btn-secondary mx-3" onclick="window.history.back()" href="#">Go back</a>
+    </div>
+  </div>
 </div>
