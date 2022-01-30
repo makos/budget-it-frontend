@@ -10,12 +10,13 @@ import { ErrorHandlerService } from './error-handler.service';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = Config.getLoginUrl();
+  private loginUrl = Config.getLoginUrl();
+  private registerUrl = Config.getRegisterUrl();
   private token: Object;
   loginEvent: Subject<boolean> = new Subject<boolean>();
 
   login(user: string, pass: string) {
-    this.http.post(this.apiUrl, {
+    this.http.post(this.loginUrl, {
       username: user,
       password: pass,
     }).subscribe(
@@ -33,6 +34,20 @@ export class UserService {
 
   getToken(): Object {
     return this.tokenService.getToken();
+  }
+
+  register(user: string, pass: string) {
+    this.http.post(this.registerUrl, {
+      username: user,
+      password: pass,
+    }, { observe: "response" }).subscribe(
+      (data) => {
+        if (data.status != 200) {
+          console.log(data);
+        }
+      },
+      (error) => catchError(this.errorHandler.handleError)
+    );
   }
 
   constructor(
