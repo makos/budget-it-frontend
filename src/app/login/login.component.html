@@ -27,6 +27,7 @@
         </div>
         <div class="mb-3">
           <input type="password" class="form-control" placeholder="Password" #registerPassword />
+          <p class="form-text">Password must be at least 8 characters long.</p>
         </div>
         <div class="text-center">
           <button class="btn btn-primary" type="button" (click)="register(registerUsername.value, registerPassword.value)">Register</button>
@@ -34,6 +35,7 @@
       </form>
     </div>
   </div>
+
   <div class="row justify-content-center mt-3">
     <div class="col-auto">
       <a class="btn btn-secondary mx-3" onclick="window.history.back()" href="#">Go back</a>
