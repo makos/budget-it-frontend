@@ -1,17 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-sm navbar-light bg-light shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" routerLink="" style="color:#FF9940">Budget It</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarContents">
       <div class="navbar-nav ms-auto">
         <a class="nav-link" routerLink="">Support</a>
-        <a class="nav-link" (click)="logout()" routerLink="" *ngIf="user; else noUser">Logout</a>
+        <a class="nav-link fw-bolder" (click)="logout()" routerLink="" *ngIf="user; else noUser">Log Out</a>
         <ng-template #noUser>
-          <a class="nav-link" routerLink="login">Login / Register</a>
+          <a class="nav-link fw-bolder" routerLink="login">Register / Log In</a>
         </ng-template>
       </div>
     </div>
