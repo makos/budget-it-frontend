@@ -1,26 +1,35 @@
 <button (click)="getRecords()">Get Records</button>
 
 <div *ngIf="records">
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Amount</th>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let record of records">
-        <td>{{ record.RecordID }}</td>
-        <td>{{ record.Amount }}</td>
-        <td>{{ record.Date }}</td>
-        <td>{{ record.Type }}</td>
-        <td>{{ record.Comment }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <table class="table table-striped table-hover table-bordered">
+        <thead class="text-center">
+          <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Comment</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let record of records; let i = index">
+            <td>{{ i+1 }}</td>
+            <td>{{ record.Amount }}</td>
+            <td>{{ record.Date }}</td>
+            <td>{{ record.Type }}</td>
+            <td>{{ record.Comment }}</td>
+            <td><a href="#">Delete</a></td>
+          </tr>
+          <tr>
+            <td colspan=6><a href="#">Add</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <div *ngIf="showError">
