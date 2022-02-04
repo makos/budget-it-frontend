@@ -39,6 +39,18 @@ export class RecordService {
     }
   }
 
+  addRecord(amount: number, type: string, comment: string, recordType: string) {
+    const body: object = {
+      amount: amount,
+      type: type,
+      comment: comment,
+      recordType: recordType
+    };
+
+    return this.http.post<Record>(this.apiUrl, body, this.httpOptions)
+      .pipe(catchError(this.errorHandler.handleError));
+  }
+
   private refreshToken() {
     this.httpOptions = {
       headers: new HttpHeaders({
