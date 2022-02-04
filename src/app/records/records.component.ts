@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Record } from '../record';
 import { RecordService } from '../record.service';
+
+// TODO: Add a toggle / radio checkboxes / dropdown, whatever to select which records are shown: income, expenses or all.
 
 @Component({
   selector: 'app-records',
@@ -11,15 +13,17 @@ import { RecordService } from '../record.service';
 export class RecordsComponent implements OnInit {
   records: Record[];
   record: Record;
-  recordForm = new FormGroup({
-    type: new FormControl(''),
-    amount: new FormControl(''),
-    comment: new FormControl(''),
+  recordForm = this.fb.group({
+    type: [''],
+    comment: [''],
+    amount: [''],
+    recordType: ['income'],
   });
   showError: boolean = false;
 
   constructor(
     private recordService: RecordService,
+    private fb: FormBuilder,
   ) {}
 
   getRecords() {
@@ -38,12 +42,13 @@ export class RecordsComponent implements OnInit {
     );
   }
 
-  sendForm() {
-    console.log({
-      "type": this.recordForm.value.type,
-      "amount": this.recordForm.value.amount,
-      "comment": this.recordForm.value.comment,
-    });
+  onSubmit() {
+    this.recordService.addRecord(
+      this.recordForm.value.amount, 
+      this.recordForm.value.type, 
+      this.recordForm.value.comment, 
+      this.recordForm.value.recordType
+    );
   }
 
   ngOnInit() {
